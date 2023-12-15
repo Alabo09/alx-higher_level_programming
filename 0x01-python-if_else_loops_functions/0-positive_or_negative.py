@@ -1,27 +1,28 @@
 #!/usr/bin/python3
 import random
 
-def check_number_positivity(number):
+
+def check_positive_negative_zero(number):
     """
-    Checks the positivity of a given number.
+    This function checks if a number is positive, negative, or zero.
 
     Args:
         number (int): The number to be checked.
 
     Returns:
-        str: A string indicating if the number is positive, zero, or negative.
+        None
     """
     if number > 0:
-        return "{} is positive".format(number)
+        print("{} is positive".format(number))
     elif number == 0:
-        return "{} is zero".format(number)
+        print("{} is zero".format(number))
     elif number < 0:
-        return "{} is negative".format(number)
+        print("{} is negative".format(number))
 
-if __name__ == "__main__":
-    # Generate a random number between -10 and 10
-    number = random.randint(-10, 10)
 
-    # Check and print the positivity of the generated number
-    result = check_number_positivity(number)
-    print(result)
+# Generate a random number between -10 and 10
+random_number = random.randint(-10, 10)
+
+# Call the function to check the generated number
+check_positive_negative_zero(random_number)
+)
